@@ -1,11 +1,114 @@
-# CLAUDE Design System
-## World-Class Design Guidelines for GoDial Flutter App
+# GoDial - CRM & Auto Dialer Project Context
 
-> *"Design is not just what it looks like and feels like. Design is how it works."* - Steve Jobs
+## 🚀 Project Overview
+
+**Project Name**: GoDial (CRM & Auto Dialer)
+**Type**: Mobile Application (Flutter)
+**Target Platforms**: iOS & Android
+**Architecture**: Offline-First, Single Codebase
+**Primary Market**: India and emerging markets
+**Project State**: Documentation & Design Phase
+
+### Mission
+Build a completely offline-capable CRM and auto-dialer mobile application that empowers sales professionals and small businesses with comprehensive contact management, automated calling capabilities, and sales pipeline tracking - all without requiring internet connectivity.
+
+### Current Project Files
+- `GoDial_Product_Requirements_Document.md` - Complete PRD with business requirements
+- `Flutter_Offline_System_Design_Document.md` - Technical architecture and implementation details
+- `Flutter_Offline_Milestone_Tracker.md` - Project timeline with 248 tasks across 12 milestones
+- `GoDial_App_Documentation.md` - Comprehensive app analysis from screenshots
+- `IMG_*.PNG` - 20+ app screenshots for reference
 
 ---
 
-## 🎨 Design Philosophy
+## 🎯 Key Objectives
+
+1. **100% Offline Functionality** - Every feature must work without internet
+2. **Performance First** - App size < 50MB, launch time < 2 seconds
+3. **10,000+ Contacts** - Support large datasets on low-end devices (2GB RAM)
+4. **Premium UI/UX** - Blue and white theme, world-class design
+5. **Multi-Language** - 9+ languages including Hindi, Bengali, Portuguese
+6. **Affordable Pricing** - ₹299/month, targeting emerging markets
+
+---
+
+## 🏗️ Technical Architecture
+
+### Technology Stack
+```yaml
+Framework: Flutter 3.16+
+State Management: Riverpod
+Database: SQLite with Drift
+Local Storage: Hive
+Navigation: Go Router
+Architecture: Clean Architecture with Feature-First Approach
+```
+
+### Core Features Status
+- [ ] Offline Contact Management
+- [ ] Auto-Dialer System
+- [ ] Sales Pipeline
+- [ ] Task Management
+- [ ] SMS/WhatsApp Queue
+- [ ] Payment Tracking
+- [ ] Analytics & Reports
+- [ ] Data Sync Engine
+
+### Database Schema
+- 10+ tables designed (contacts, call_logs, tasks, sync_queue, etc.)
+- Optimized indexes for performance
+- Conflict resolution for sync
+- Version control for data integrity
+
+---
+
+## 💡 Key Technical Decisions
+
+1. **Offline-First**: Local SQLite database with sync queue
+2. **State Management**: Riverpod for scalability and testing
+3. **Conflict Resolution**: Last-write-wins with field-level merge
+4. **Encryption**: SQLCipher for database, AES-256 for sensitive data
+5. **Sync Strategy**: Differential sync with incremental updates
+6. **Architecture**: Clean Architecture for maintainability
+
+---
+
+## 📋 Current Development Phase
+
+**Phase**: Documentation & Design (Completed)
+**Next Phase**: Environment Setup & Core Infrastructure
+**Timeline**: 6-month development cycle
+**Team Size**: Planned for 5 developers
+
+### Immediate Next Steps
+1. Set up Flutter development environment
+2. Initialize project with architecture
+3. Implement offline database layer
+4. Create base UI components with design system
+
+---
+
+## 🚫 Constraints & Limitations
+
+- **No Internet Dependency**: Core features must work offline
+- **Device Support**: Android 7.0+, iOS 12.0+
+- **Storage**: < 500MB for 10,000 contacts
+- **Battery**: < 5% drain per hour of active use
+- **Performance**: 60 FPS on 2GB RAM devices
+
+---
+
+## 📝 Important Notes for Development
+
+1. **Always Think Offline First** - Design every feature to work without connectivity
+2. **Use the Design System** - Follow CLAUDE.md design guidelines strictly
+3. **Test on Low-End Devices** - Ensure performance on 2GB RAM phones
+4. **Implement Graceful Degradation** - Features should fail gracefully
+5. **Security is Non-Negotiable** - Encrypt sensitive data always
+
+---
+
+## 🎨 Design System
 
 ### Core Principles
 
@@ -1377,4 +1480,64 @@ Remember: **Great design is invisible when done right, but unforgettable when ex
 
 *"Design is not just what it looks like and feels like. Design is how it works."* - Steve Jobs
 
-*Document Version: 1.0 | Last Updated: November 2024*
+---
+
+## 🤖 Claude Session Guidelines
+
+### When Working on This Project:
+
+1. **Offline-First Mindset**: Always design features to work without internet
+2. **Follow Design System**: Use the blue and white theme defined above
+3. **Performance Matters**: Test with 10,000 contacts in mind
+4. **Security First**: Encrypt all sensitive data
+5. **Mobile-Only**: No web version planned currently
+
+### Common Commands for Development:
+
+```bash
+# Flutter commands
+flutter create godial --org com.godial --platforms=ios,android
+flutter pub get
+flutter run
+flutter build apk --release
+flutter build ios --release
+
+# Git workflow
+git add .
+git commit -m "feat: implement offline contact management"
+git push origin main
+
+# Testing
+flutter test
+flutter test --coverage
+flutter drive --target=test_driver/app.dart
+```
+
+### Project Structure:
+```
+lib/
+├── core/           # Core functionality, constants, themes
+├── features/       # Feature modules (contacts, dialer, etc.)
+├── data/          # Data layer (database, models, repositories)
+├── domain/        # Business logic (entities, use cases)
+├── presentation/  # UI layer (screens, widgets, providers)
+└── main.dart      # Entry point
+```
+
+### Key Files to Reference:
+- For requirements: `GoDial_Product_Requirements_Document.md`
+- For architecture: `Flutter_Offline_System_Design_Document.md`
+- For timeline: `Flutter_Offline_Milestone_Tracker.md`
+- For UI reference: `IMG_*.PNG` screenshots
+
+### Remember:
+- This is an offline-first CRM for emerging markets
+- Every feature should work without internet
+- The app should feel premium despite being affordable
+- Performance on low-end devices is critical
+- The blue and white design system is non-negotiable
+
+---
+
+*Document Version: 1.1 | Last Updated: November 2024*
+*This CLAUDE.md file provides context for all Claude sessions in the GoDial project*
